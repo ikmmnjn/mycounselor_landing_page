@@ -1,0 +1,5 @@
+/* App.css is used for component specific overrides if needed */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,143 @@
+:root {
+  --primary: #1A2B45;
+  --primary-light: #2A3B55;
+  --secondary: #3B82F6;
+  --accent: #10B981;
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
+  --bg-main: #FFFFFF;
+  --bg-alt: #F8FAFC;
+  --border: #E2E8F0;
+  --white: #FFFFFF;
+
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  font-size: 18px;
+  /* Standard base font-size increased for better readability */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+  /* Tighter tracking for modern look */
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1300px;
+  /* Slightly wider container for large typography */
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 140px 0;
+  /* More vertical breathing room */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+  /* Aggressive tracking for large headings */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-alt);
+  border-color: var(--text-muted);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.mb-8 {
+  margin-bottom: 64px;
+}
+
+
+@media (max-width: 768px) {
+  .logo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+  }
+}
