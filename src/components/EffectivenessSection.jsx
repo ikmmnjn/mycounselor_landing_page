@@ -10,7 +10,7 @@ const EffectivenessSection = () => {
     ];
 
     return (
-        <section id="effectiveness" className="effectiveness-section">
+        <section id="effectiveness-section" className="effectiveness-section">
             <style>{`
                 .effectiveness-section {
                     padding: 80px 0;

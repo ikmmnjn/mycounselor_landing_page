@@ -125,8 +125,10 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="desktop-nav desktop-only">
           <ul className="nav-list">
-            <li><a href="#eap-info" className="nav-link">EAP</a></li>
             <li><a href="#supervisor" className="nav-link">슈퍼바이저</a></li>
+            <li><a href="#strength-2" className="nav-link">기업 전용 플랫폼</a></li>
+            <li><a href="#strength-1" className="nav-link">맞춤형 힐링 프로그램</a></li>
+            <li><a href="#effectiveness-section" className="nav-link">효과 및 후기</a></li>
           </ul>
           <a href="#contact" className="btn btn-primary header-btn">
             도입 문의
@@ -142,9 +144,10 @@ const Header = () => {
       {/* Mobile Menu Overlay (Simplified) */}
       {isMobileMenuOpen && (
         <div className="mobile-menu-overlay">
-          <a href="#eap-info" className="mobile-menu-link">서비스</a>
-          <a href="#supervisor" className="mobile-menu-link">슈퍼비전</a>
-          <a href="#contact" className="mobile-menu-link">문의</a>
+          <a href="#supervisor" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>슈퍼바이저</a>
+          <a href="#strength-2" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>기업 전용 플랫폼</a>
+          <a href="#strength-1" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>맞춤형 힐링 프로그램</a>
+          <a href="#effectiveness-section" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>효과 및 후기</a>
           <a href="#contact" className="btn btn-primary mobile-menu-btn" onClick={() => setIsMobileMenuOpen(false)}>도입 문의</a>
         </div>
       )}

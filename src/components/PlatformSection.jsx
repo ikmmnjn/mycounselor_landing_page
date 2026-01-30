@@ -280,7 +280,7 @@ const PlatformSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        핵심 강점 02
+                        마이카운슬러의 차별점 2
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

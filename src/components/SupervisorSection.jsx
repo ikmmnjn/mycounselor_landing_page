@@ -343,7 +343,7 @@ const SupervisorSection = () => {
                             letterSpacing: '0.05em'
                         }}
                     >
-                        핵심 강점 01
+                        마이카운슬러의 차별점 1
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -363,7 +363,6 @@ const SupervisorSection = () => {
                             className="supervisor-desc"
                         >
                             <b>슈퍼바이저</b>란 상담사를 지도하는 상담사를 말합니다.<br />
-                            1급 상담사만 가능한 슈퍼바이저가 직접 상담합니다.
                         </motion.p>
                     </div>
                 </div>
