@@ -304,7 +304,7 @@ const PlatformSection = () => {
                 <div className="platform-grid">
                     <div className="visual-stack">
                         <motion.img
-                            src="/assets/platform_pc.png"
+                            src={`${import.meta.env.BASE_URL}assets/platform_pc.png`}
                             alt="PC Platform Mockup"
                             className="pc-mockup"
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -313,7 +313,7 @@ const PlatformSection = () => {
                             transition={{ duration: 0.8 }}
                         />
                         <motion.img
-                            src="/assets/platform_mo1.png"
+                            src={`${import.meta.env.BASE_URL}assets/platform_mo1.png`}
                             alt="Mobile Platform Mockup 1"
                             className="mo-mockup-1"
                             initial={{ opacity: 0, x: 50, y: 50 }}

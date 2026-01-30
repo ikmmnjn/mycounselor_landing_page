@@ -161,12 +161,12 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h1 className="hero-title">
-                        마음 건강 관리를 통해<br />
-                        <span>기업의 생산성을 높이세요</span>
+                        실제로 작동하는<br />
+                        <span>EAP 운영 파트너</span>
                     </h1>
                     <p className="hero-description">
-                        직원은 심리상담, 마음건강 프로그램을 이용하고<br />
-                        회사는 이직률은 낮추고, 생산성을 높입니다.
+                        직원은 심리상담과 마음건강 프로그램을 통해 회복하고,<br />
+                        기업은 안정적인 조직 운영과 성과 향상을 만들어갑니다.
                     </p>
 
                 </motion.div>

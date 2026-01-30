@@ -26,7 +26,7 @@ const CounselorMarquee = () => {
                 {displayImages.map((idx, i) => (
                     <div key={`${idx}-${i}`} className="marquee-item">
                         <img
-                            src={`/images/counselors/counselor_${idx}.jpg`}
+                            src={`${import.meta.env.BASE_URL}images/counselors/counselor_${idx}.jpg`}
                             alt={`Counselor ${idx}`}
                             loading="lazy"
                         />

@@ -142,23 +142,23 @@ const CTASection = () => {
                         <div className="logo-marquee-track">
                             {[...Array(2)].map((_, i) => (
                                 <React.Fragment key={i}>
-                                    <div className="logo-item"><img src="/assets/logos/jiran.png" alt="지란지교소프트" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/kobaco.png" alt="KOBACO" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/gyeongnam.png" alt="경상남도교육청" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/srt_new.png" alt="SRT" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/daesang.png" alt="DAESANG" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/women_new.png" alt="한국여성인권진흥원" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/sudokwon_new.png" alt="수도권매립지관리공사" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/bucheon_new.png" alt="부천대학교" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/gyeonggi_new.jpg" alt="경기도" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/jeonnam.png" alt="전라남도" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/seoul_family.png" alt="서울시여성가족재단" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/gwanak_new.jpg" alt="관악구" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/gangnam_new.png" alt="강남구" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/yeongdeungpo_new.jpg" alt="영등포구" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/kyobo.png" alt="교보문고" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/daeju.png" alt="대주산업" /></div>
-                                    <div className="logo-item"><img src="/assets/logos/flatpoint.png" alt="플랫포인트" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/jiran.png`} alt="지란지교소프트" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/kobaco.png`} alt="KOBACO" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/gyeongnam.png`} alt="경상남도교육청" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/srt_new.png`} alt="SRT" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/daesang.png`} alt="DAESANG" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/women_new.png`} alt="한국여성인권진흥원" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/sudokwon_new.png`} alt="수도권매립지관리공사" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/bucheon_new.png`} alt="부천대학교" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/gyeonggi_new.jpg`} alt="경기도" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/jeonnam.png`} alt="전라남도" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/seoul_family.png`} alt="서울시여성가족재단" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/gwanak_new.jpg`} alt="관악구" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/gangnam_new.png`} alt="강남구" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/yeongdeungpo_new.jpg`} alt="영등포구" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/kyobo.png`} alt="교보문고" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/daeju.png`} alt="대주산업" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/flatpoint.png`} alt="플랫포인트" /></div>
                                 </React.Fragment>
                             ))}
                         </div>

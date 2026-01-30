@@ -7,25 +7,25 @@ const HealingSection = () => {
             id: 1,
             title: "조직&팀 빌딩 프로그램",
             desc: "성과관리의 핵심인 소통과 조직 문화를 위해 마이카운슬러만의 맞춤형 팀 빌딩 프로그램을 제공합니다.",
-            image: "/assets/healing_team.png"
+            image: `${import.meta.env.BASE_URL}assets/healing_team.png`
         },
         {
             id: 2,
             title: "스트레스 관리 프로그램",
             desc: "전문가와 함께 스트레스를 체계적으로 이해하고 관리하며 정서적 안정을 회복하는 프로그램입니다.",
-            image: "/assets/healing_stress.png"
+            image: `${import.meta.env.BASE_URL}assets/healing_stress.png`
         },
         {
             id: 3,
             title: "자기 탐색 프로그램",
             desc: "분주한 일상 속에서 나를 돌아보고 진정한 나를 발견하며 회복과 성장을 경험할 수 있습니다.",
-            image: "/assets/healing_self.png"
+            image: `${import.meta.env.BASE_URL}assets/healing_self.png`
         },
         {
             id: 4,
             title: "웰니스&건강&명상 프로그램",
             desc: "체계적인 명상과 건강 증진 활동을 통해 임직원의 몸과 마음의 활력을 높여드립니다.",
-            image: "/assets/healing_wellness.png"
+            image: `${import.meta.env.BASE_URL}assets/healing_wellness.png`
         }
     ];
 
