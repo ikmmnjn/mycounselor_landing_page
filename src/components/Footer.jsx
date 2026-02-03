@@ -60,6 +60,19 @@ const Footer = () => {
                     gap: 8px;
                 }
 
+                .footer-link-item a {
+                    color: inherit;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: color 0.2s ease;
+                }
+
+                .footer-link-item a:hover {
+                    color: var(--primary);
+                }
+
                 .footer-copyright {
                     margin-top: 60px;
                     text-align: center;
@@ -100,7 +113,11 @@ const Footer = () => {
                         <div>
                             <h4 className="footer-links-title">Links</h4>
                             <ul className="footer-links-list">
-                                <li className="footer-link-item">공식 홈페이지 <ExternalLink size={14} /></li>
+                                <li className="footer-link-item">
+                                    <a href="https://mycoun21.com/" target="_blank" rel="noopener noreferrer">
+                                        공식 홈페이지 <ExternalLink size={14} />
+                                    </a>
+                                </li>
                                 <li>개인정보처리방침</li>
                                 <li>이용약관</li>
                             </ul>
