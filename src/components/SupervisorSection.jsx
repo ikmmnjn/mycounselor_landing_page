@@ -39,10 +39,10 @@ const CounselorMarquee = () => {
 
 const SupervisorSection = () => {
     const supervisorDetails = [
-        { icon: Users, label: "보유 인력", value: "280명 이상의 1급 슈퍼바이저급 전문가" },
-        { icon: Award, label: "평균 경력", value: "10년 이상의 임상 및 상담 실무 경력" },
-        { icon: Target, label: "전문 분야", value: "개인상담, 집단상담, 위기개입, 조직상담 등 전 영역" },
-        { icon: Globe, label: "협력 네트워크", value: "명상협회, 물리치료사협회, 코칭협회, 테라피스트 네트워크 등 전문 연계망 보유" }
+        { icon: Users, label: "상담 진행 인력", value: "280명 이상의 1급 주요 상담 경력과 실무 경험을 갖춘 1급 상담사가 상담 진행" },
+        { icon: Award, label: "상담 품질 기준", value: "인증된 학회 자격을 갖춘 1급 상담사만 상담에 참여" },
+        { icon: Target, label: "전문 분야", value: "개인상담, 집단상담, 위기개입, 조직상담 등 조직 환경에서 발생하는 다양한 상담 영역에 특화된 EAP 상담 경험" },
+        { icon: Globe, label: "협력 네트워크", value: "심리상담을 중심으로 명상·신체·코칭 및 재무·법무·노무 분야까지 상담 이후 필요한 영역에 연계할 수 있는 협력 네트워크를 운영" }
     ];
 
     return (
@@ -168,6 +168,7 @@ const SupervisorSection = () => {
                     color: var(--primary);
                     line-height: 1.5;
                     word-break: keep-all;
+                    white-space: pre-line;
                 }
 
                 .supervisor-visuals {
@@ -352,7 +353,7 @@ const SupervisorSection = () => {
                         className="supervisor-title"
                         style={{ marginBottom: '24px' }}
                     >
-                        마이카운슬러는 <span>슈퍼바이저</span>가 직접 상담합니다.
+                        마이카운슬러는 <span>1급 상담사</span>가 직접 상담합니다.
                     </motion.h2>
                     <div className="supervisor-desc-block" style={{ marginBottom: '0' }}>
                         <motion.p
@@ -362,14 +363,14 @@ const SupervisorSection = () => {
                             transition={{ delay: 0.1 }}
                             className="supervisor-desc"
                         >
-                            <b>슈퍼바이저</b>란 상담사를 지도하는 상담사를 말합니다.<br />
+                            상담사 수보다 중요한 건, 누가 상담하느냐 아닐까요?<br />
                         </motion.p>
                     </div>
                 </div>
 
                 <div className="strengths-header">
-                    <span className="strengths-badge">마이카운슬러 협력 슈퍼바이저</span>
-                    <h3 className="strengths-title">검증된 전문가 인프라</h3>
+                    <span className="strengths-badge">마이카운슬러 협력 1급 상담사</span>
+                    <h3 className="strengths-title">검증된 전문 상담 인력 인프라</h3>
                 </div>
 
                 <div className="supervisor-info-grid">

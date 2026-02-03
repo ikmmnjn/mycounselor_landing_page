@@ -138,6 +138,5 @@ h4 {
 @media (max-width: 768px) {
   .logo-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 20px;
   }
 }

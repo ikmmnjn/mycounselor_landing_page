@@ -14,15 +14,13 @@ const CTASection = () => {
                     border-top: 1px solid var(--border);
                 }
 
-                .client-logos-section h4 {
-                    font-size: 1.2rem;
-                    color: var(--text-muted);
-                    margin-bottom: 40px;
-                    letter-spacing: 0.2em;
-                    font-weight: 700;
-                    text-transform: uppercase;
+                .client-logos-section h2 {
+                    font-size: clamp(1.75em, 2vw, 4.5rem);
+                    color: #000000;
+                    margin-bottom: 60px;
+                    font-weight: 800;
+                    letter-spacing: -0.04em;
                 }
-
                 .logo-marquee-container {
                     width: 100%;
                     overflow: hidden;
@@ -55,19 +53,18 @@ const CTASection = () => {
                     align-items: center;
                     width: max-content;
                     animation: marquee 50s linear infinite;
-                    gap: 40px;
-                    padding-right: 40px;
+                    gap: 90px;
+                    padding-right: 90px;
                 }
-
                 @keyframes marquee {
                     0% { transform: translateX(0); }
                     100% { transform: translateX(-50%); }
                 }
 
                 .logo-item img {
-                    height: 44px;
+                    height: 90px;
                     width: auto;
-                    max-width: 160px;
+                    max-width: 280px;
                     object-fit: contain;
                     transition: all 0.3s ease;
                 }
@@ -137,7 +134,7 @@ const CTASection = () => {
 
             <section id="partners" className="client-logos-section">
                 <div className="container">
-                    <h4>협력 업체</h4>
+                    <h2>협력 업체</h2>
                     <div className="logo-marquee-container">
                         <div className="logo-marquee-track">
                             {[...Array(2)].map((_, i) => (
