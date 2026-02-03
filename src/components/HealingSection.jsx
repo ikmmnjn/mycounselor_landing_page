@@ -30,7 +30,7 @@ const HealingSection = () => {
     ];
 
     return (
-        <section className="healing-section" id="strength-1">
+        <section className="healing-section" id="strength-4">
             <style>{`
                 .healing-section {
                     padding: 100px 0;
@@ -169,7 +169,7 @@ const HealingSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        마이카운슬러의 차별점 3
+                        마이카운슬러의 차별점 4
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

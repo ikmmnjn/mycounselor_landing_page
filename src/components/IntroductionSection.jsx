@@ -72,16 +72,16 @@ const IntroductionSection = () => {
                 }
 
                 .chat-avatar {
-                    width: 64px;
-                    height: 64px;
+                    width: 72px;
+                    height: 72px;
                     background: white;
-                    border-radius: 20px;
+                    border-radius: 24px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 32px;
+                    font-size: 40px;
                     flex-shrink: 0;
-                    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+                    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
                     border: 1px solid #f1f5f9;
                 }
 

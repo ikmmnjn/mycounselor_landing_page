@@ -46,7 +46,7 @@ const SupervisorSection = () => {
     ];
 
     return (
-        <section id="supervisor" className="supervisor-section">
+        <section id="strength-1" className="supervisor-section">
             <style>{`
                 .supervisor-section {
                     background-color: transparent;

@@ -161,7 +161,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h1 className="hero-title">
-                        실제로 작동하는<br />
+                        조직의 마음을 돌보는<br />
                         <span>EAP 운영 파트너</span>
                     </h1>
                     <p className="hero-description">

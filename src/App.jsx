@@ -8,6 +8,7 @@ import EffectivenessSection from './components/EffectivenessSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import HealingSection from './components/HealingSection';
 import PlatformSection from './components/PlatformSection';
+import ReportSecuritySection from './components/ReportSecuritySection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import './App.css';
@@ -22,6 +23,7 @@ function App() {
         <TargetSection />
         <SupervisorSection />
         <PlatformSection />
+        <ReportSecuritySection />
         <HealingSection />
         <EffectivenessSection />
         <TestimonialsSection />

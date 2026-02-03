@@ -6,23 +6,14 @@ const PlatformSection = () => {
     const features = [
         {
             icon: <Monitor className="w-6 h-6" />,
-            title: "상담 접근성 향상",
-            desc: "PC와 모바일 모두 지원하여 시간과 장소 제약 없이 언제 어디서나 간편하게 상담을 신청하고 결과를 확인할 수 있습니다."
+            title: "전용 EAP 웹페이지 제공",
+            desc: "기업·기관별 최적화된 독립적인 웹 환경을 제공해드립니다."
         },
+
         {
-            icon: <BarChart3 className="w-6 h-6" />,
-            title: "행정 효율성 증대",
-            desc: "상담 현황, 이용 통계, 만족도 결과를 실시간으로 점검하고 자동화된 보고서 작성 기능으로 업무를 최소화합니다."
-        },
-        {
-            icon: <ShieldCheck className="w-6 h-6" />,
-            title: "보안 및 개인정보 보호",
-            desc: "국제 정보보안 표준 ISO 27001 인증을 획득한 정보보안 관리체계를 기반으로, 모든 개인정보와 상담 데이터는 엄격하게 분리·통제됩니다."
-        },
-        {
-            icon: <Settings className="w-6 h-6" />,
-            title: "기관 맞춤형 브랜딩",
-            desc: "기관명, 로고, 색상 등을 반영한 맞춤형 페이지 구성으로 임직원이 '우리 기관 전용 플랫폼'으로 체감하며 몰입도를 높입니다."
+            icon: <Smartphone className="w-6 h-6" />,
+            title: "데이터 기반 맞춤형 직원 관리",
+            desc: "기업 담당자의 운영 부담은 낮추고, 데이터 관리는 더욱 정교해집니다."
         }
     ];
 
@@ -193,7 +184,6 @@ const PlatformSection = () => {
                 .test-content p {
                     color: #94a3b8;
                     font-size: 1.1rem;
-                    margin-bottom: 32px;
                 }
 
                 .test-tags {
@@ -270,6 +260,34 @@ const PlatformSection = () => {
                     }
                     .pc-mockup { max-width: 100%; }
                 }
+
+                .platform-quote {
+                    margin-top: 60px;
+                    padding: 40px;
+                    background: var(--bg-alt);
+                    border-radius: 24px;
+                    border-left: 6px solid var(--secondary);
+                    text-align: left;
+                    max-width: 800px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .platform-quote p {
+                    font-size: 1.25rem;
+                    color: var(--text-main);
+                    line-height: 1.8;
+                    margin: 0;
+                    font-weight: 500;
+                }
+
+                .platform-quote strong {
+                    color: var(--secondary);
+                    font-weight: 800;
+                    display: block;
+                    margin-top: 12px;
+                    font-size: 1.5rem;
+                }
             `}</style>
 
             <div className="container">
@@ -288,7 +306,7 @@ const PlatformSection = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        기업 전용 상담 플랫폼 제공
+                        기업 전용 맞춤형 EAP 웹 제공
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -296,8 +314,8 @@ const PlatformSection = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        단순한 상담 연결을 넘어, 기업의 행정 효율성과<br />
-                        임직원의 접근성을 극대화한 스마트 플랫폼을 구축해 드립니다.
+                        단순한 상담 연결을 넘어, 기업의 고유한 특성이 반영된<br />
+                        <strong>실제로 임직원이 사용하는 전용 플랫폼</strong>을 구축해 드립니다.
                     </motion.p>
                 </div>
 
@@ -346,6 +364,8 @@ const PlatformSection = () => {
                     </div>
                 </div>
 
+
+
                 <motion.div
                     className="test-banner"
                     initial={{ opacity: 0, y: 40 }}
@@ -355,7 +375,8 @@ const PlatformSection = () => {
                 >
                     <div className="test-content">
                         <h4>7종의 무료 심리검사 상시 제공</h4>
-                        <p>우리 회사는 필요할 때마다 즉시 심리 검사를 시행할 수 있는 상시 진단 체계를 갖추고 있습니다. 조직 전체의 마음 건강을 실시간으로 점검하고, 곧바로 전문 상담으로 연계합니다.</p>
+                        <p>우리 회사는 필요할 때마다 즉시 심리 검사를 시행할 수 있는 상시 진단 체계를 갖추고 있습니다. <br />
+                            조직 전체의 마음 건강을 실시간으로 점검하고, 곧바로 전문 상담으로 연계합니다.</p>
 
                     </div>
 
