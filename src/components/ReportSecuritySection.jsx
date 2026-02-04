@@ -138,6 +138,31 @@ const ReportSecuritySection = () => {
                     display: block;
                 }
 
+                .card-illu-wrapper {
+                    position: absolute;
+                    width: 180px;
+                    height: 180px;
+                    z-index: 5;
+                    pointer-events: none;
+                }
+
+                .left-card .card-illu-wrapper {
+                    top: -60px;
+                    right: -40px;
+                }
+
+                .right-card .card-illu-wrapper {
+                    top: -60px;
+                    left: -40px;
+                }
+
+                .card-illu-wrapper img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+                }
+
                 /* Content Styles */
                 .zigzag-content {
                     flex: 1;
@@ -223,6 +248,15 @@ const ReportSecuritySection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
+                                <div className="card-illu-wrapper">
+                                    <motion.img
+                                        src={`${import.meta.env.BASE_URL}assets/security/report_data.png`}
+                                        alt="Report Illustration"
+                                        initial={{ y: 0 }}
+                                        animate={{ y: [0, -10, 0] }}
+                                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                    />
+                                </div>
                                 <span className="card-category">정기 운영 보고</span>
                                 <h4 className="card-title">
                                     EAP 지표를 통해 이용 현황을 실시간으로 확인하고 싶어요
@@ -266,6 +300,15 @@ const ReportSecuritySection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
+                                <div className="card-illu-wrapper">
+                                    <motion.img
+                                        src={`${import.meta.env.BASE_URL}assets/security/security_trust.png`}
+                                        alt="Security Illustration"
+                                        initial={{ y: 0 }}
+                                        animate={{ y: [0, -10, 0] }}
+                                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                    />
+                                </div>
                                 <span className="card-category">비밀보장 및 정보보호</span>
                                 <h4 className="card-title">
                                     임직원의 소중한 상담 정보,<br />

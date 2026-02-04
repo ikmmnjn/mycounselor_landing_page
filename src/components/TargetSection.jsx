@@ -5,42 +5,42 @@ import { Users, Building2, Zap, ShieldAlert, Clock, CheckCircle2 } from 'lucide-
 const TargetSection = () => {
     const targets = [
         {
-            icon: Users,
+            illu: "management.png",
             color: "#3b82f6", // Blue
             bg: "#eff6ff",
             title: "관리 부담이 과도하게 집중된 조직",
             desc: "한정된 관리자에 비해 직원이 많아서 관리 부담이 버거운 조직"
         },
         {
-            icon: Building2,
+            illu: "public_inst.png",
             color: "#6366f1", // Indigo
             bg: "#eef2ff",
             title: "공공·준공공 기관",
             desc: "공공기관·공기업·교육기관 등\n조직 특성상 내부에서 정서 이슈를\n다루기 어렵고 외부 전문성과 비밀보장이 필요한 조직"
         },
         {
-            icon: Zap,
+            illu: "stress.png",
             color: "#f59e0b", // Amber
             bg: "#fffbeb",
             title: "감정 노동과 스트레스가 높은 조직",
             desc: "민원, 고객 응대, 보호자·학부모 대응 등 업무 특성상 감정 소진이 누적되기 쉬운 조직"
         },
         {
-            icon: ShieldAlert,
+            illu: "burnout.png",
             color: "#ef4444", // Red
             bg: "#fef2f2",
             title: "이직·휴직·번아웃 신호가 반복되는 조직",
             desc: "갑작스러운 퇴사, 병가, 휴직이 늘어나지만 그 이유를 파악하기 어려운 조직"
         },
         {
-            icon: Clock,
+            illu: "usage.png",
             color: "#10b981", // Emerald
             bg: "#ecfdf5",
             title: "EAP를 도입했지만,\n실제 이용률이 낮은 조직",
             desc: "제도는 있지만 직원들이 신뢰하지 않거나 접근하지 않는 상황의 조직"
         },
         {
-            icon: CheckCircle2,
+            illu: "risk.png",
             color: "#06b6d4", // Cyan
             bg: "#ecfeff",
             title: "‘사람 문제’를 리스크로\n인식하기 시작한 조직",
@@ -106,13 +106,23 @@ const TargetSection = () => {
                 }
 
                 .target-icon-wrapper {
-                    width: 72px;
-                    height: 72px;
-                    border-radius: 24px;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 30px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     transition: transform 0.3s ease;
+                    overflow: hidden;
+                    padding: 0;
+                    background: white !important; /* Force white background for images */
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                }
+
+                .target-icon-wrapper img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
 
                 .target-card:hover .target-icon-wrapper {
@@ -147,6 +157,7 @@ const TargetSection = () => {
                     .target-title { font-size: 2rem; }
                     .target-grid { grid-template-columns: 1fr; }
                     .target-card { padding: 32px; }
+                    .target-icon-wrapper { width: 80px; height: 80px; }
                 }
             `}</style>
 
@@ -166,11 +177,8 @@ const TargetSection = () => {
                             transition={{ delay: i * 0.1 }}
                             className="target-card"
                         >
-                            <div
-                                className="target-icon-wrapper"
-                                style={{ backgroundColor: item.bg, color: item.color }}
-                            >
-                                <item.icon size={32} strokeWidth={2.5} />
+                            <div className="target-icon-wrapper">
+                                <img src={`${import.meta.env.BASE_URL}assets/target/${item.illu}`} alt={item.title} />
                             </div>
                             <div className="target-content">
                                 <h3>{item.title}</h3>
