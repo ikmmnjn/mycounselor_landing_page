@@ -8,21 +8,21 @@ const TargetSection = () => {
             icon: Users,
             color: "#3b82f6", // Blue
             bg: "#eff6ff",
-            title: "관리 부담이 특정 개인에게 집중된 조직",
-            desc: "직원 수와 관계없이 HR 또는 관리자가 직원들의 정서 문제까지 개인적으로 감당하고 있는 구조의 조직"
+            title: "관리 부담이 과도하게 집중된 조직",
+            desc: "한정된 관리자에 비해 직원이 많아서 관리 부담이 버거운 조직"
         },
         {
             icon: Building2,
             color: "#6366f1", // Indigo
             bg: "#eef2ff",
             title: "공공·준공공 기관",
-            desc: "공공기관·공기업·교육기관 등 조직 특성상 내부에서 정서 이슈를 다루기 어렵고 외부 전문성과 비밀보장이 중요한 조직"
+            desc: "공공기관·공기업·교육기관 등\n조직 특성상 내부에서 정서 이슈를\n다루기 어렵고 외부 전문성과 비밀보장이 필요한 조직"
         },
         {
             icon: Zap,
             color: "#f59e0b", // Amber
             bg: "#fffbeb",
-            title: "감정 노동과 책임 스트레스가 높은 조직",
+            title: "감정 노동과 스트레스가 높은 조직",
             desc: "민원, 고객 응대, 보호자·학부모 대응 등 업무 특성상 감정 소진이 누적되기 쉬운 조직"
         },
         {
@@ -36,14 +36,14 @@ const TargetSection = () => {
             icon: Clock,
             color: "#10b981", // Emerald
             bg: "#ecfdf5",
-            title: "EAP를 도입했지만, 실제 이용률이 낮은 조직",
+            title: "EAP를 도입했지만,\n실제 이용률이 낮은 조직",
             desc: "제도는 있지만 직원들이 신뢰하지 않거나 접근하지 않는 상황의 조직"
         },
         {
             icon: CheckCircle2,
             color: "#06b6d4", // Cyan
             bg: "#ecfeff",
-            title: "‘사람 문제’를 조직 리스크로 인식하기 시작한 조직",
+            title: "‘사람 문제’를 리스크로\n인식하기 시작한 조직",
             desc: "갈등, 사건, 민원, 이슈를 경험했거나 사전에 관리할 필요성을 느끼는 조직"
         }
     ];
@@ -125,6 +125,7 @@ const TargetSection = () => {
                     color: #1e293b;
                     margin-bottom: 20px;
                     line-height: 1.2;
+                    white-space: pre-wrap;
                     letter-spacing: -0.02em;
                 }
 
@@ -132,6 +133,7 @@ const TargetSection = () => {
                     font-size: 1.15rem;
                     color: #64748b;
                     line-height: 1.6;
+                    white-space: pre-wrap;
                     word-break: keep-all;
                     font-weight: 500;
                 }

@@ -272,7 +272,7 @@ const ReportSecuritySection = () => {
                                     완벽한 보안이 필요해요
                                 </h4>
                                 <div className="card-image-box">
-                                    <img src={`${import.meta.env.BASE_URL}assets/iso_cert.jpg`} alt="ISO 27001 인증서" />
+                                    <img src={`${import.meta.env.BASE_URL}assets/iso_cert_new.png`} alt="ISO 27001 인증서" />
                                 </div>
                             </motion.div>
 

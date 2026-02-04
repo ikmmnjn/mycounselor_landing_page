@@ -39,10 +39,10 @@ const CounselorMarquee = () => {
 
 const SupervisorSection = () => {
     const supervisorDetails = [
-        { icon: Users, label: "상담 진행 인력", value: "280명 이상의 1급 주요 상담 경력과 실무 경험을 갖춘 1급 상담사가 상담 진행" },
+        { icon: Users, label: "상담 진행 인력", value: "280명 이상의 다년간의 상담 경력과 실무 경험을 갖춘 1급 상담사가 상담 진행" },
         { icon: Award, label: "상담 품질 기준", value: "인증된 학회 자격을 갖춘 1급 상담사만 상담에 참여" },
-        { icon: Target, label: "전문 분야", value: "개인상담, 집단상담, 위기개입, 조직상담 등 조직 환경에서 발생하는 다양한 상담 영역에 특화된 EAP 상담 경험" },
-        { icon: Globe, label: "협력 네트워크", value: "심리상담을 중심으로 명상·신체·코칭 및 재무·법무·노무 분야까지 상담 이후 필요한 영역에 연계할 수 있는 협력 네트워크를 운영" }
+        { icon: Target, label: "전문 분야", value: "개인상담, 집단상담, 위기개입, 조직상담\n등 조직 환경에서 발생하는 다양한 상담 영역에 특화된 EAP 상담 경험" },
+        { icon: Globe, label: "협력 네트워크", value: "심리상담을 중심으로\n명상·신체·코칭 부터\n재무·법무·노무 분야까지\n전 영역에 걸쳐 연계할 수 있는 협력 네트워크를 운영" }
     ];
 
     return (

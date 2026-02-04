@@ -4,13 +4,26 @@ import { motion } from 'framer-motion';
 
 import engagementStats from '../assets/engagement-stats.png';
 
+// Import New 3D Assets
+import solLaptop from '../assets/intro/sol_laptop.png';
+import solDoc from '../assets/intro/sol_doc.png';
+import solStar from '../assets/intro/sol_star.png';
+import solTrophy from '../assets/intro/sol_trophy.png';
+
+import avatarThinking from '../assets/intro/avatar_thinking.png';
+import avatarWorried from '../assets/intro/avatar_worried.png';
+import avatarShhh from '../assets/intro/avatar_shhh.png';
+import avatarSad from '../assets/intro/avatar_sad.png';
+import avatarExpert from '../assets/intro/avatar_expert.png';
+import avatarPanic from '../assets/intro/avatar_panic.png';
+
 const IntroductionSection = () => {
 
     const solutions = [
-        { icon: "💻", title: "압도적인 사용성", desc: "온·오프라인 어디서나\n즉시 상담 가능" },
-        { icon: "📄", title: "까다로운 전문성", desc: "엄격한 전문 자격 검증\n1600명+ 상담사 네트워크" },
-        { icon: "⭐", title: "높은 상담 만족도", desc: "★4.85점\n높은 상담 만족도와 후기" },
-        { icon: "🏆", title: "비교불가 인지도", desc: "400만 회원 보유\n국내 1등 심리상담 플랫폼" }
+        { icon: solLaptop, title: "압도적인 사용성", desc: "온·오프라인 어디서나\n즉시 상담 가능" },
+        { icon: solDoc, title: "까다로운 전문성", desc: "엄격한 전문 자격 검증\n1600명+ 상담사 네트워크" },
+        { icon: solStar, title: "높은 상담 만족도", desc: "★4.85점\n높은 상담 만족도와 후기" },
+        { icon: solTrophy, title: "비교불가 인지도", desc: "400만 회원 보유\n국내 1등 심리상담 플랫폼" }
     ];
 
     return (
@@ -72,17 +85,23 @@ const IntroductionSection = () => {
                 }
 
                 .chat-avatar {
-                    width: 72px;
-                    height: 72px;
+                    width: 96px;
+                    height: 96px;
                     background: white;
-                    border-radius: 24px;
+                    border-radius: 32px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 40px;
+                    overflow: hidden;
                     flex-shrink: 0;
-                    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+                    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
                     border: 1px solid #f1f5f9;
+                }
+
+                .chat-avatar img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
 
                 .chat-bubble {
@@ -188,11 +207,17 @@ const IntroductionSection = () => {
                     align-items: center;
                     justify-content: center;
                     margin: 0 auto 32px;
-                    font-size: 48px;
                     position: relative;
                     box-shadow: 
                         0 10px 20px rgba(0, 0, 0, 0.03),
                         inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+                    overflow: hidden;
+                }
+
+                .sol-icon img {
+                    width: 70%;
+                    height: 70%;
+                    object-fit: contain;
                 }
 
                 .sol-icon::after {
@@ -248,12 +273,12 @@ const IntroductionSection = () => {
                 {/* Phase 2: Chat Interaction (Questions Only) */}
                 <div className="chat-phase">
                     {[
-                        { avatar: "🙎‍♂️", text: "“업무 효율이 점점 떨어지는 것 같아요.”", x: -50, y: -20, rotate: -5 },
-                        { avatar: "👩‍💼", text: "“도입한 EAP, 정작 직원들은 안 써요.”", x: 50, y: -30, rotate: 5 },
-                        { avatar: "💻", text: "“비밀 보장이 정말 되는 게 맞나요?”", x: -40, y: 10, rotate: -3 },
-                        { avatar: "🏢", text: "“퇴사율이 늘어 고민이 많습니다.”", x: 60, y: 20, rotate: 4 },
-                        { avatar: "🤝", text: "“진짜 전문가가 상담해주는 건가요?”", x: -30, y: 40, rotate: -2 },
-                        { avatar: "🙋‍♀️", text: "“상담 받으려면 복잡할 것 같아요.”", x: 40, y: 50, rotate: 6 }
+                        { avatar: avatarThinking, text: "“업무 효율이 점점 떨어지는 것 같아요.”", x: -50, y: -20, rotate: -5 },
+                        { avatar: avatarWorried, text: "“도입한 EAP, 정작 직원들은 안 써요.”", x: 50, y: -30, rotate: 5 },
+                        { avatar: avatarShhh, text: "“비밀 보장이 정말 되는 게 맞나요?”", x: -40, y: 10, rotate: -3 },
+                        { avatar: avatarSad, text: "“퇴사율이 늘어 고민이 많습니다.”", x: 60, y: 20, rotate: 4 },
+                        { avatar: avatarExpert, text: "“진짜 전문가가 상담해주는 건가요?”", x: -30, y: 40, rotate: -2 },
+                        { avatar: avatarPanic, text: "“상담 받으려면 복잡할 것 같아요.”", x: 40, y: 50, rotate: 6 }
                     ].map((chat, i) => (
                         <div className="chat-instance" key={i}>
                             <motion.div
@@ -268,7 +293,7 @@ const IntroductionSection = () => {
                                 }}
                                 className="chat-avatar"
                             >
-                                {chat.avatar}
+                                <img src={chat.avatar} alt="avatar" />
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0, x: chat.x * 0.5, y: chat.y * 0.5 }}
@@ -287,6 +312,8 @@ const IntroductionSection = () => {
                         </div>
                     ))}
                 </div>
+
+
 
 
             </div>
