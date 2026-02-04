@@ -364,36 +364,6 @@ const IntroductionSection = () => {
                     ))}
                 </div>
 
-                {/* Phase 3: Solutions Grid */}
-                <div className="solution-phase">
-                    <div className="solution-header">
-                        <span className="solution-tag">OUR SOLUTION</span>
-                        <h2 className="solution-title">왜 마이카운슬러 EAP인가요?</h2>
-                        <p className="solution-desc">
-                            국내 최대 규모의 전문가 네트워크와 데이터 기술력을 바탕으로<br />
-                            조직의 실질적인 변화를 만들어냅니다.
-                        </p>
-                    </div>
-
-                    <div className="solution-grid">
-                        {solutions.map((item, i) => (
-                            <motion.div
-                                key={i}
-                                className="sol-card"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                            >
-                                <div className="sol-icon">
-                                    <img src={item.icon} alt={item.title} />
-                                </div>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
 
 
             </div>

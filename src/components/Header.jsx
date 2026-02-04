@@ -6,15 +6,16 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => { document.body.style.overflow = 'auto'; };
+  }, [isMobileMenuOpen]);
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+    <header className={`header ${isScrolled || isMobileMenuOpen ? 'header-scrolled' : ''}`}>
       <style>{`
         .header {
             position: fixed;
@@ -29,9 +30,9 @@ const Header = () => {
         }
 
         .header-scrolled {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 1);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .header-container {
@@ -39,21 +40,23 @@ const Header = () => {
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            padding: 0 24px;
         }
 
         .header-logo {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 900;
-            color: var(--primary);
-            cursor: pointer;
+            color: #1e293b;
             text-decoration: none;
             letter-spacing: -0.05em;
+            z-index: 1001;
         }
 
         .header-logo-suffix {
             font-weight: 400;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             margin-left: 4px;
+            color: #3b82f6;
         }
 
         .desktop-nav {
@@ -62,47 +65,60 @@ const Header = () => {
             align-items: center;
         }
 
-        .nav-list {
-            display: flex;
-            gap: 32px;
-        }
-
-        .nav-link {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
-        }
-
         .header-btn {
-            padding: 10px 20px;
-            font-size: 0.9rem;
+            padding: 10px 24px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 12px;
         }
 
         .mobile-toggle {
             cursor: pointer;
+            z-index: 1001;
+            position: relative;
+            color: #1e293b;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .mobile-menu-overlay {
             position: fixed;
-            top: 80px;
+            top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background-color: white;
-            padding: 40px 24px;
+            height: 100vh;
+            height: 100dvh;
+            background-color: #ffffff;
+            padding: 100px 24px 40px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
-            z-index: 999;
+            gap: 12px;
+            z-index: 1000;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .mobile-menu-link {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            padding: 15px 0;
+            border-bottom: 1px solid #f1f5f9;
+            text-decoration: none;
+            display: block;
         }
 
         .mobile-menu-btn {
             width: 100%;
+            margin-top: 24px;
+            padding: 18px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            border-radius: 12px;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -118,13 +134,12 @@ const Header = () => {
         }
       `}</style>
       <div className="container header-container">
-        <a href="#hero" className="header-logo">
+        <a href="#hero" className="header-logo" onClick={() => setIsMobileMenuOpen(false)}>
           MYCOUNSELOR <span className="header-logo-suffix">EAP</span>
         </a>
 
         {/* Desktop Menu */}
         <nav className="desktop-nav desktop-only">
-
           <a href="#contact" className="btn btn-primary header-btn">
             도입 문의
           </a>
@@ -132,19 +147,31 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <div className="mobile-only mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X /> : <Menu />}
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </div>
       </div>
 
-      {/* Mobile Menu Overlay (Simplified) */}
+      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="mobile-menu-overlay">
-          <a href="#strength-1" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>슈퍼바이저</a>
-          <a href="#strength-2" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>기업 전용 플랫폼</a>
-          <a href="#strength-3" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>보고 및 비밀보장</a>
-          <a href="#strength-4" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>맞춤형 힐링 프로그램</a>
-          <a href="#effectiveness-section" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>효과 및 후기</a>
-          <a href="#contact" className="btn btn-primary mobile-menu-btn" onClick={() => setIsMobileMenuOpen(false)}>도입 문의</a>
+          <a href="#strength-1" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>
+            슈퍼바이저
+          </a>
+          <a href="#strength-2" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>
+            기업 전용 플랫폼
+          </a>
+          <a href="#strength-3" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>
+            보고 및 비밀보장
+          </a>
+          <a href="#strength-4" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>
+            맞춤형 힐링 프로그램
+          </a>
+          <a href="#effectiveness-section" className="mobile-menu-link" onClick={() => setIsMobileMenuOpen(false)}>
+            효과 및 후기
+          </a>
+          <a href="#contact" className="btn btn-primary mobile-menu-btn" onClick={() => setIsMobileMenuOpen(false)}>
+            도입 문의하기
+          </a>
         </div>
       )}
     </header>

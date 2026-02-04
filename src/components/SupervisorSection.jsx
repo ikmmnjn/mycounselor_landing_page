@@ -363,7 +363,7 @@ const SupervisorSection = () => {
                             transition={{ delay: 0.1 }}
                             className="supervisor-desc"
                         >
-                            상담사 수보다 중요한 건, 누가 상담하느냐 아닐까요?<br />
+                            아무리 많은 상담사가 있어도 내가 만나는 상담사가 가장 중요합니다.<br />
                         </motion.p>
                     </div>
                 </div>

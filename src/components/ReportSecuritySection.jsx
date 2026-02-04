@@ -241,7 +241,7 @@ const ReportSecuritySection = () => {
                                 >
                                     체계적인 운영 관리와<br />
                                     정기 리포트로<br />
-                                    성과를 명확하게 보여드립니다
+                                    성과를 명확히 보여드립니다
                                 </motion.h3>
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}

@@ -227,8 +227,7 @@ const FooterCTA = () => {
                                         공식 홈페이지 <ExternalLink size={14} />
                                     </a>
                                 </li>
-                                <li>개인정보처리방침</li>
-                                <li>이용약관</li>
+
                             </ul>
                         </div>
                     </div>
