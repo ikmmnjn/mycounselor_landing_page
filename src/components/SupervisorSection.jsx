@@ -315,10 +315,10 @@ const SupervisorSection = () => {
 
                 @media (max-width: 768px) {
                     .supervisor-section { padding: 60px 0; }
-                    .supervisor-title { font-size: 2rem; text-align: left; }
-                    .supervisor-desc-block { text-align: left; margin-bottom: 40px; }
+                    .supervisor-title { font-size: 2rem; text-align: center; }
+                    .supervisor-desc-block { text-align: center; margin-bottom: 40px; }
                     .supervisor-desc { font-size: 1rem; }
-                    .strengths-header { text-align: left; margin-top: 40px; }
+                    .strengths-header { text-align: center; margin-top: 40px; }
                     .photo-wall-frame { border-radius: 24px; }
                     .frame-header { padding: 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
                     .frame-subtitle { padding-left: 0; }

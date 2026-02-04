@@ -253,6 +253,11 @@ const PlatformSection = () => {
                 @media (max-width: 640px) {
                     .features-list {
                         grid-template-columns: 1fr;
+                        gap: 40px;
+                    }
+                    .feature-item {
+                        align-items: center;
+                        text-align: center;
                     }
                     .platform-header h2 {
                         font-size: 2rem;
