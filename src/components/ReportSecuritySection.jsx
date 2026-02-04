@@ -239,9 +239,9 @@ const ReportSecuritySection = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2 }}
                                 >
-                                    운영 관리 부담 없이,<br />
-                                    정기 보고서로<br />
-                                    시작해보세요
+                                    체계적인 운영 관리와<br />
+                                    정기 리포트로<br />
+                                    성과를 명확하게 보여드립니다
                                 </motion.h3>
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}
@@ -249,8 +249,8 @@ const ReportSecuritySection = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.3 }}
                                 >
-                                    월간 이용 현황 및 운영 결과를 정교한 통계 지표와 함께 정기적으로 보고해 드립니다.
-                                    개인 식별이 불가능한 형태의 통계 분석 결과를 통해 조직의 전반적인 심리 상태를 안전하게 파악하세요.
+                                    월간 이용 현황과 상담 운영 결과를 정교한 통계 지표로 정기 보고합니다.
+                                    개인 식별이 불가능한 데이터 기반 분석을 통해, 조직 전반의 심리 상태와 프로그램 효과를 객관적으로 확인할 수 있는 관리 체계를 제공합니다.
                                 </motion.p>
                             </div>
                         </div>

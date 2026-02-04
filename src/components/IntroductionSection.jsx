@@ -77,12 +77,39 @@ const IntroductionSection = () => {
                     height: 550px;
                 }
 
+                @media (max-width: 768px) {
+                    .chat-phase {
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        margin-bottom: 80px;
+                        padding: 0 20px;
+                    }
+                }
+
                 .chat-instance {
                     position: absolute;
                     display: flex;
                     align-items: center;
                     gap: 20px;
                     z-index: 10;
+                }
+
+                @media (max-width: 768px) {
+                    .chat-instance {
+                        position: relative !important;
+                        top: auto !important;
+                        left: auto !important;
+                        right: auto !important;
+                        flex-direction: row !important;
+                        justify-content: flex-start;
+                        width: 100%;
+                    }
+                    .chat-instance:nth-child(even) {
+                        flex-direction: row-reverse !important;
+                        justify-content: flex-end;
+                    }
                 }
 
                 .chat-avatar {
@@ -99,10 +126,24 @@ const IntroductionSection = () => {
                     border: 1px solid #f1f5f9;
                 }
 
+                @media (max-width: 768px) {
+                    .chat-avatar {
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 20px;
+                    }
+                }
+
                 .chat-avatar img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                }
+
+                /* Zoom in on thinking avatar face */
+                .chat-avatar.thinking img {
+                    transform: scale(1.4);
+                    transform-origin: center 30%;
                 }
 
                 .chat-bubble {
@@ -118,6 +159,15 @@ const IntroductionSection = () => {
                     box-shadow: 0 12px 40px rgba(0,0,0,0.05);
                     white-space: nowrap;
                     letter-spacing: -0.02em;
+                }
+
+                @media (max-width: 768px) {
+                    .chat-bubble {
+                        padding: 12px 20px;
+                        font-size: 1rem;
+                        white-space: normal;
+                        max-width: calc(100% - 100px);
+                    }
                 }
 
                 /* Variant styles for scatter */
@@ -274,7 +324,7 @@ const IntroductionSection = () => {
                 {/* Phase 2: Chat Interaction (Questions Only) */}
                 <div className="chat-phase">
                     {[
-                        { avatar: avatarThinking, text: "“업무 효율이 점점 떨어지는 것 같아요.”", x: -50, y: -20, rotate: -5 },
+                        { avatar: avatarThinking, text: "“업무 효율이 점점 떨어지는 것 같아요.”", x: -50, y: -20, rotate: -5, type: 'thinking' },
                         { avatar: avatarWorried, text: "“도입한 EAP, 정작 직원들은 안 써요.”", x: 50, y: -30, rotate: 5 },
                         { avatar: avatarShhh, text: "“비밀 보장이 정말 되는 게 맞나요?”", x: -40, y: 10, rotate: -3 },
                         { avatar: avatarSad, text: "“퇴사율이 늘어 고민이 많습니다.”", x: 60, y: 20, rotate: 4 },
@@ -292,7 +342,7 @@ const IntroductionSection = () => {
                                     damping: 20,
                                     delay: i * 0.15
                                 }}
-                                className="chat-avatar"
+                                className={`chat-avatar ${chat.type || ""}`}
                             >
                                 <img src={chat.avatar} alt="avatar" />
                             </motion.div>
@@ -314,7 +364,36 @@ const IntroductionSection = () => {
                     ))}
                 </div>
 
+                {/* Phase 3: Solutions Grid */}
+                <div className="solution-phase">
+                    <div className="solution-header">
+                        <span className="solution-tag">OUR SOLUTION</span>
+                        <h2 className="solution-title">왜 마이카운슬러 EAP인가요?</h2>
+                        <p className="solution-desc">
+                            국내 최대 규모의 전문가 네트워크와 데이터 기술력을 바탕으로<br />
+                            조직의 실질적인 변화를 만들어냅니다.
+                        </p>
+                    </div>
 
+                    <div className="solution-grid">
+                        {solutions.map((item, i) => (
+                            <motion.div
+                                key={i}
+                                className="sol-card"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                            >
+                                <div className="sol-icon">
+                                    <img src={item.icon} alt={item.title} />
+                                </div>
+                                <h4>{item.title}</h4>
+                                <p>{item.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
 
 
             </div>
