@@ -12,8 +12,8 @@ const PlatformSection = () => {
 
         {
             icon: <Smartphone className="w-6 h-6" />,
-            title: "데이터 기반 맞춤형 직원 관리",
-            desc: "기업 담당자의 운영 부담은 낮추고, 데이터 관리는 더욱 정교해집니다."
+            title: "간편한 인터페이스",
+            desc: "쉬운 사용방법으로\n기업 담당자의 운영 부담은 낮추고, 데이터 관리는 더 수월해 집니다."
         }
     ];
 
@@ -136,6 +136,7 @@ const PlatformSection = () => {
                     font-size: 1.25rem;
                     font-weight: 800;
                     color: var(--primary);
+                    white-space: pre-wrap;
                 }
 
                 .feature-item p {
@@ -143,6 +144,7 @@ const PlatformSection = () => {
                     color: var(--text-muted);
                     line-height: 1.6;
                     word-break: keep-all;
+                    white-space: pre-wrap;
                 }
 
                 .test-banner {
@@ -306,7 +308,7 @@ const PlatformSection = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        기업 전용 맞춤형 EAP 웹 제공
+                        기업 전용 맞춤형 EAP 웹 무료 제공
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -375,8 +377,9 @@ const PlatformSection = () => {
                 >
                     <div className="test-content">
                         <h4>7종의 무료 심리검사 상시 제공</h4>
-                        <p>우리 회사는 필요할 때마다 즉시 심리 검사를 시행할 수 있는 상시 진단 체계를 갖추고 있습니다. <br />
-                            조직 전체의 마음 건강을 실시간으로 점검하고, 곧바로 전문 상담으로 연계합니다.</p>
+                        <p>즉시 이용 가능한 심리검사를 제공하여,
+                            조직 구성원이 언제든 마음 건강을 점검할 수 있도록 지원합니다.<br />
+                            검사 결과는 전문 상담 서비스와 연계하여 활용할 수 있습니다.</p>
 
                     </div>
 

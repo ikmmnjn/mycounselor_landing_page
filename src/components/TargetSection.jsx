@@ -8,7 +8,7 @@ const TargetSection = () => {
             illu: "management.png",
             color: "#3b82f6", // Blue
             bg: "#eff6ff",
-            title: "관리 부담이 과도하게 집중된 조직",
+            title: "관리 부담이 과도하게\n집중된 조직",
             desc: "한정된 관리자에 비해 직원이 많아서 관리 부담이 버거운 조직"
         },
         {
@@ -91,42 +91,54 @@ const TargetSection = () => {
                     border-radius: 40px;
                     background: #f8fafc;
                     border: 1px solid #f1f5f9;
-                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    /* Specify properties to avoid glitchy 'all' transition */
+                    transition: 
+                        background 0.4s cubic-bezier(0.175, 0.885, 0.32, 1),
+                        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                        box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1),
+                        border-color 0.4s ease;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 32px;
+                    isolation: isolate;
+                    cursor: pointer;
                 }
 
                 .target-card:hover {
-                    background: white;
+                    background: #ffffff;
                     transform: translateY(-12px);
                     box-shadow: 0 40px 80px rgba(0,0,0,0.06);
                     border-color: #e2e8f0;
                 }
 
                 .target-icon-wrapper {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 30px;
+                    width: 120px;
+                    height: 120px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    transition: transform 0.3s ease;
-                    overflow: hidden;
+                    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     padding: 0;
-                    background: white !important; /* Force white background for images */
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    margin-bottom: 8px;
+                    will-change: transform;
                 }
 
                 .target-icon-wrapper img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
+                    mix-blend-mode: multiply;
+                    /* Prevent background flickering during transition */
+                    transform: translateZ(0); 
+                    /* Nudge white background to be pure white for perfect multiply blending */
+                    filter: brightness(1.08) contrast(1.02);
+                    pointer-events: none;
+                    backface-visibility: hidden;
                 }
 
                 .target-card:hover .target-icon-wrapper {
-                    transform: scale(1.1) rotate(5deg);
+                    transform: scale(1.18) translateY(-8px);
                 }
 
                 .target-content h3 {

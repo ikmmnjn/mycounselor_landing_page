@@ -23,7 +23,7 @@ const HealingSection = () => {
         },
         {
             id: 4,
-            title: "웰니스&건강&명상 프로그램",
+            title: "웰니스 & 건강 &\n명상 프로그램",
             desc: "체계적인 명상과 건강 증진 활동을 통해 임직원의 몸과 마음의 활력을 높여드립니다.",
             image: `${import.meta.env.BASE_URL}assets/healing_wellness.png`
         }
@@ -125,6 +125,7 @@ const HealingSection = () => {
                     margin-bottom: 12px;
                     color: var(--primary);
                     line-height: 1.4;
+                    white-space: pre-wrap;
                 }
 
                 .program-desc {

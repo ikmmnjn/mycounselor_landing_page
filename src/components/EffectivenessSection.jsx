@@ -78,41 +78,49 @@ const EffectivenessSection = () => {
                 .eff-card {
                     background-color: var(--white);
                     border-radius: 40px;
-                    padding: 60px;
+                    padding: 80px 60px;
                     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
                     max-width: 1100px;
                     margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: 1fr 1.2fr;
-                    gap: 60px;
-                    align-items: center;
-                }
-
-                .eff-stats-left {
                     display: flex;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 48px;
+                }
+
+                .eff-item-row {
+                    display: grid;
+                    grid-template-columns: 250px 1fr;
+                    gap: 60px;
+                    align-items: center;
+                    padding-bottom: 48px;
+                    border-bottom: 1px solid #f1f5f9;
+                }
+
+                .eff-item-row:last-child {
+                    padding-bottom: 0;
+                    border-bottom: none;
                 }
 
                 .eff-stat-box {
                     background-color: #f8fafc;
-                    padding: 24px;
-                    border-radius: 20px;
+                    padding: 32px 24px;
+                    border-radius: 24px;
                     text-align: center;
                     border: 1px solid var(--border);
                     transition: all 0.3s ease;
+                    height: fit-content;
                 }
 
                 .eff-stat-label {
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                     font-weight: 700;
-                    margin-bottom: 8px;
+                    margin-bottom: 12px;
                     display: block;
                     color: var(--text-muted);
                 }
 
                 .eff-stat-value {
-                    font-size: 1.75rem;
+                    font-size: 2.25rem;
                     font-weight: 900;
                     display: flex;
                     align-items: center;
@@ -122,20 +130,14 @@ const EffectivenessSection = () => {
                 }
 
                 .eff-stat-value span {
-                    font-size: 1rem;
+                    font-size: 1.25rem;
                     font-weight: 700;
-                }
-
-                .eff-chart-right {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 32px;
                 }
 
                 .chart-row {
                     display: flex;
                     flex-direction: column;
-                    gap: 12px;
+                    gap: 20px;
                 }
 
                 .chart-label-group {
@@ -145,17 +147,17 @@ const EffectivenessSection = () => {
                 }
 
                 .chart-label {
-                    font-weight: 800;
+                    font-weight: 900;
                     color: var(--primary);
-                    font-size: 1.05rem;
+                    font-size: 1.4rem;
                 }
 
                 .chart-diff-badge {
                     background-color: #ecfdf5;
                     color: #10b981;
-                    padding: 4px 12px;
+                    padding: 6px 16px;
                     border-radius: 100px;
-                    font-size: 0.85rem;
+                    font-size: 1.1rem;
                     font-weight: 800;
                     border: 1px solid rgba(16, 185, 129, 0.2);
                 }
@@ -163,33 +165,33 @@ const EffectivenessSection = () => {
                 .bar-pair-container {
                     display: flex;
                     flex-direction: column;
-                    gap: 8px;
+                    gap: 12px;
                 }
 
                 .bar-group {
                     display: flex;
                     align-items: center;
-                    gap: 12px;
+                    gap: 16px;
                 }
 
                 .bar-label-mini {
-                    min-width: 60px;
-                    font-size: 0.75rem;
-                    font-weight: 700;
+                    min-width: 100px;
+                    font-size: 1.1rem;
+                    font-weight: 800;
                     color: var(--text-muted);
                 }
 
                 .bar-track {
                     flex-grow: 1;
-                    height: 12px;
+                    height: 16px;
                     background-color: #f1f5f9;
-                    border-radius: 6px;
+                    border-radius: 8px;
                     position: relative;
                 }
 
                 .bar-fill {
                     height: 100%;
-                    border-radius: 6px;
+                    border-radius: 8px;
                     position: relative;
                 }
 
@@ -204,11 +206,11 @@ const EffectivenessSection = () => {
 
                 .bar-value {
                     position: absolute;
-                    left: calc(100% + 8px);
+                    left: calc(100% + 12px);
                     top: 50%;
                     transform: translateY(-50%);
-                    font-size: 0.85rem;
-                    font-weight: 800;
+                    font-size: 1.1rem;
+                    font-weight: 900;
                     color: var(--primary);
                     white-space: nowrap;
                 }
@@ -216,47 +218,47 @@ const EffectivenessSection = () => {
                 .chart-legend {
                     display: flex;
                     justify-content: flex-end;
-                    gap: 20px;
+                    gap: 24px;
                     margin-bottom: 8px;
                 }
 
                 .legend-item {
                     display: flex;
                     align-items: center;
-                    gap: 8px;
-                    font-size: 0.85rem;
+                    gap: 10px;
+                    font-size: 1rem;
                     color: var(--text-muted);
                     font-weight: 700;
                 }
 
                 .legend-dot {
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 3px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 4px;
                 }
 
                 @media (max-width: 968px) {
                     .eff-card {
-                        grid-template-columns: 1fr;
-                        padding: 40px 24px;
+                        padding: 48px 32px;
                         gap: 40px;
                     }
-                    .eff-stats-left {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        gap: 12px;
+                    .eff-item-row {
+                        grid-template-columns: 1fr;
+                        gap: 32px;
                     }
                     .eff-stat-box {
-                        padding: 16px 8px;
+                        width: 100%;
+                        max-width: 300px;
+                        margin: 0 auto;
                     }
-                    .eff-stat-value {
+                    .chart-label {
                         font-size: 1.25rem;
                     }
                 }
 
                 @media (max-width: 640px) {
-                    .eff-stats-left {
-                        grid-template-columns: 1fr;
+                    .chart-legend {
+                        justify-content: center;
                     }
                 }
             `}</style>
@@ -299,31 +301,33 @@ const EffectivenessSection = () => {
                     viewport={{ once: true }}
                     className="eff-card"
                 >
-                    <div className="eff-stats-left">
-                        {stats.map((s, i) => (
-                            <div key={i} className="eff-stat-box">
+                    <div className="chart-legend">
+                        <div className="legend-item">
+                            <div className="legend-dot" style={{ backgroundColor: '#cbd5e1' }} />
+                            상담 전
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-dot" style={{ backgroundColor: 'var(--secondary)' }} />
+                            상담 후
+                        </div>
+                    </div>
+
+                    {stats.map((s, i) => (
+                        <div key={i} className="eff-item-row">
+                            <motion.div
+                                className="eff-stat-box"
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 + 0.3 }}
+                            >
                                 <span className="eff-stat-label">{s.label} 개선</span>
                                 <div className="eff-stat-value">
                                     {s.diff}<span>▼</span>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            </motion.div>
 
-                    <div className="eff-chart-right">
-                        <div className="chart-legend">
-                            <div className="legend-item">
-                                <div className="legend-dot" style={{ backgroundColor: '#cbd5e1' }} />
-                                상담 전
-                            </div>
-                            <div className="legend-item">
-                                <div className="legend-dot" style={{ backgroundColor: 'var(--secondary)' }} />
-                                상담 후
-                            </div>
-                        </div>
-
-                        {stats.map((s, i) => (
-                            <div key={i} className="chart-row">
+                            <div className="chart-row">
                                 <div className="chart-label-group">
                                     <span className="chart-label">{s.label}</span>
                                     <span className="chart-diff-badge">{s.diff} 개선</span>
@@ -359,8 +363,8 @@ const EffectivenessSection = () => {
                                     </div>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </motion.div>
 
                 <p style={{ fontSize: '0.8rem', color: '#94a3b8', textAlign: 'center', marginTop: '40px' }}>

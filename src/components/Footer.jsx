@@ -98,7 +98,7 @@ const Footer = () => {
                         <div className="footer-brand">마이카운슬러</div>
                         <p className="footer-company-info">
                             주식회사 마이카운슬러 | 대표이사: 권경애 <br />
-                            서울특별시 마포구 마포대로 38, 907호
+                            서울특별시 마포구 마포대로 38, 일신빌딩
                         </p>
                     </div>
 
@@ -106,7 +106,7 @@ const Footer = () => {
                         <div>
                             <h4 className="footer-links-title">Contact</h4>
                             <ul className="footer-links-list">
-                                <li className="footer-link-item"><Phone size={16} /> 010-2416-3110</li>
+                                <li className="footer-link-item"><Phone size={16} /> 02-6359-1100</li>
                                 <li className="footer-link-item"><Mail size={16} /> mycoun@mycoun21.com</li>
                             </ul>
                         </div>

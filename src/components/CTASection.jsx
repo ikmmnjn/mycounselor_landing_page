@@ -139,6 +139,9 @@ const CTASection = () => {
                         <div className="logo-marquee-track">
                             {[...Array(2)].map((_, i) => (
                                 <React.Fragment key={i}>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/assoc_kca.png`} alt="한국상담학회" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/assoc_kcpa.png`} alt="한국상담심리학회" /></div>
+                                    <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/assoc_kclin.png`} alt="한국임상심리학회" /></div>
                                     <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/jiran.png`} alt="지란지교소프트" /></div>
                                     <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/kobaco.png`} alt="KOBACO" /></div>
                                     <div className="logo-item"><img src={`${import.meta.env.BASE_URL}assets/logos/gyeongnam.png`} alt="경상남도교육청" /></div>

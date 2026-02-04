@@ -120,6 +120,7 @@ const ReportSecuritySection = () => {
                     margin-bottom: 32px;
                     line-height: 1.3;
                     word-break: keep-all;
+                    white-space: pre-wrap;
                 }
 
                 .card-image-box {
@@ -233,7 +234,7 @@ const ReportSecuritySection = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        보고 및 비밀보장 체계
+                        통계 보고 및 비밀 보장 체계
                     </motion.h2>
                 </div>
 
@@ -248,18 +249,10 @@ const ReportSecuritySection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <div className="card-illu-wrapper">
-                                    <motion.img
-                                        src={`${import.meta.env.BASE_URL}assets/security/report_data.png`}
-                                        alt="Report Illustration"
-                                        initial={{ y: 0 }}
-                                        animate={{ y: [0, -10, 0] }}
-                                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                    />
-                                </div>
+
                                 <span className="card-category">정기 운영 보고</span>
                                 <h4 className="card-title">
-                                    EAP 지표를 통해 이용 현황을 실시간으로 확인하고 싶어요
+                                    " EAP 지표를 통해 이용 현황을 실시간으로 확인하고 싶어요 "
                                 </h4>
                                 <div className="card-image-box">
                                     <img src={`${import.meta.env.BASE_URL}assets/report_sample.jpg`} alt="EAP 운영 보고서 샘플" />
@@ -301,18 +294,12 @@ const ReportSecuritySection = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <div className="card-illu-wrapper">
-                                    <motion.img
-                                        src={`${import.meta.env.BASE_URL}assets/security/security_trust.png`}
-                                        alt="Security Illustration"
-                                        initial={{ y: 0 }}
-                                        animate={{ y: [0, -10, 0] }}
-                                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                    />
+
                                 </div>
                                 <span className="card-category">비밀보장 및 정보보호</span>
                                 <h4 className="card-title">
-                                    임직원의 소중한 상담 정보,<br />
-                                    완벽한 보안이 필요해요
+                                    " 임직원의 소중한 상담 정보,<br />
+                                    완벽한 보안이 필요해요 "
                                 </h4>
                                 <div className="card-image-box">
                                     <img src={`${import.meta.env.BASE_URL}assets/iso_cert_new.png`} alt="ISO 27001 인증서" />
@@ -338,7 +325,8 @@ const ReportSecuritySection = () => {
                                 >
                                     비밀보장 원칙에 기반한 상담 운영은 물론,
                                     국제 정보보호 표준인 <strong>ISO/IEC 27001 인증</strong>을 보유한 관리 체계를 구축하였습니다.
-                                    임직원이 어떠한 눈치나 혼선 없이 상담을 시작할 수 있는 환경을 보장합니다.
+                                    인증된 관리 체계를 바탕으로 상담 정보와 개인 데이터를 안전하게 보호합니다.
+                                    상담 기록과 개인정보는 엄격한 기준에 따라 관리됩니다.
                                 </motion.p>
                                 <div className="iso-badge-inline">
                                     <Award size={16} /> ISO/IEC 27001 인증 보유
