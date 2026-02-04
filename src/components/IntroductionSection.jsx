@@ -1,3 +1,4 @@
+// Updated intro emojis and assets
 import React from 'react';
 import { motion } from 'framer-motion';
 // Removed unused icons: MessageCircle, Brain, Sparkles, AlertTriangle
