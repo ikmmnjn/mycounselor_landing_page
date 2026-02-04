@@ -6,8 +6,8 @@ const PlatformSection = () => {
     const features = [
         {
             icon: <Monitor className="w-6 h-6" />,
-            title: "전용 EAP 웹페이지 제공",
-            desc: "기업·기관별 최적화된 독립적인 웹 환경을 제공해드립니다."
+            title: "기업 전용 맞춤형 EAP 웹\n무료 제공",
+            desc: "초기 구축 비용에 대한 부담 없이, 즉시 운영 가능한 EAP 환경을 제공합니다."
         },
 
         {
@@ -136,7 +136,7 @@ const PlatformSection = () => {
                     font-size: 1.25rem;
                     font-weight: 800;
                     color: var(--primary);
-                    white-space: pre-wrap;
+                    white-space: pre-wrap !important;
                 }
 
                 .feature-item p {
@@ -144,7 +144,7 @@ const PlatformSection = () => {
                     color: var(--text-muted);
                     line-height: 1.6;
                     word-break: keep-all;
-                    white-space: pre-wrap;
+                    white-space: pre-wrap !important;
                 }
 
                 .test-banner {
@@ -358,8 +358,22 @@ const PlatformSection = () => {
                                     <div className="feature-icon-box">
                                         {f.icon}
                                     </div>
-                                    <h3>{f.title}</h3>
-                                    <p>{f.desc}</p>
+                                    <h3>
+                                        {f.title.split('\n').map((line, idx) => (
+                                            <React.Fragment key={idx}>
+                                                {line}
+                                                {idx !== f.title.split('\n').length - 1 && <br />}
+                                            </React.Fragment>
+                                        ))}
+                                    </h3>
+                                    <p>
+                                        {f.desc.split('\n').map((line, idx) => (
+                                            <React.Fragment key={idx}>
+                                                {line}
+                                                {idx !== f.desc.split('\n').length - 1 && <br />}
+                                            </React.Fragment>
+                                        ))}
+                                    </p>
                                 </motion.div>
                             ))}
                         </div>

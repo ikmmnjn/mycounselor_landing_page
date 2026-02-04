@@ -6,7 +6,7 @@ const EffectivenessSection = () => {
     const stats = [
         { label: "우울 지수", before: 67, after: 22, diff: "-45%p", color: "#3b82f6" },
         { label: "불안 지수", before: 67, after: 27, diff: "-40%p", color: "#60a5fa" },
-        { label: "스트레스 지수", before: 45, after: 5, diff: "-40%p", color: "#93c5fd" }
+        { label: "스트레스 지수", before: 52, after: 9, diff: "-43%p", color: "#93c5fd" }
     ];
 
     return (
